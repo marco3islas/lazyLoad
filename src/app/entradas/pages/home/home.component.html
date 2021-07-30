@@ -1,6 +1,37 @@
-<!-- TODO hacer la barra responsiva-->
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode='push'>
+
+<mat-toolbar color='accent'>
+  <span>Menu</span>
+    <button mat-icon-button
+            (click)="sidenav.toggle()"
+            >
+            <mat-icon>menu</mat-icon>
+
+    </button>
+
+</mat-toolbar>
+<mat-nav-list>
+
+  <a href="">
+    <mat-icon mat-list-icon>
+      list
+    </mat-icon>
+  </a>
+  <a href=""></a>
+  <a href=""></a>
+  <a href=""></a>
+  <a href=""></a>
+
+</mat-nav-list>
+  </mat-sidenav>
 <mat-toolbar color='warn'>
-  <button mat-icon-button class='abrirMenu'> <mat-icon>menu</mat-icon></button>
+
+  <button mat-icon-button class='abrirMenu'
+          (click)="sidenav.toggle()"
+    > 
+    <mat-icon>menu</mat-icon>
+  </button>
   <span>Lazy Load</span>
   <span class="spacer"></span>
 <nav color='primary'>
@@ -11,3 +42,5 @@
 </mat-toolbar>
 <h3>home</h3>
 <router-outlet></router-outlet>
+
+</mat-sidenav-container>
